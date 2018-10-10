@@ -32,7 +32,40 @@ app.post("/weather-forecast", (req, res) => {
             `http://api.openweathermap.org/data/2.5/weather?zip=${zipcode},us&APPID=5ff3c2d31df65ddb5baf09addb40c4d7`
         )
         .then(function(data) {
-            console.log(data[0]);
-            res.render("new-page");
+            console.log("keys", Object.keys(data.data));
+            console.log(data.data.sys.country);
+            res.render("new-page", {
+                country: data.data.sys.country,
+                city: data.data.name,
+                date: getDate(),
+                tempMin: fahrenheit(data.data.main.temp_min),
+                tempMax: fahrenheit(data.data.main.temp_max),
+                currentTemp: fahrenheit(data.data.main.temp),
+                wind: data.data.wind.speed,
+                clouds: data.data.clouds.all,
+                humidity: data.data.main.humidity
+            });
         });
 });
+
+function fahrenheit(kelvin) {
+    let fah = Math.round(((kelvin - 273.15) * 9) / 5 + 32);
+    return fah;
+}
+
+function getDate() {
+    var today = new Date();
+    var dd = today.getDate();
+    var mm = today.getMonth() + 1; //January is 0!
+    var yyyy = today.getFullYear();
+
+    if (dd < 10) {
+        dd = "0" + dd;
+    }
+
+    if (mm < 10) {
+        mm = "0" + mm;
+    }
+
+    return (today = mm + "/" + dd + "/" + yyyy);
+}
