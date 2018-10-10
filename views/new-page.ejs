@@ -6,44 +6,47 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
-    <h1>
-        Today is
-        <%= date %>
-    </h1>
-    <h1>
-        <%= country %>
-            <%= city %>
-    </h1>
-    <h2>
-        Current temp
-        <%= currentTemp %>&#8457
+<body class="forecast-img">
+    <div class="transparent-box">
+        <h1>
+            Today is
+            <%= date %>
+        </h1>
+        <h1>
+            <%= country %>
+                <%= city %>
+        </h1>
+        <h2>
+            Current temp
+            <%= currentTemp %>&#8457
 
-    </h2>
+        </h2>
 
-    <h2>
-        Min temp
-        <%= tempMin %>&#8457
-    </h2>
-    <h2>
-        Max temp
-        <%= tempMax %>&#8457
-    </h2>
+        <h2>
+            Min temp
+            <%= tempMin %>&#8457
+        </h2>
+        <h2>
+            Max temp
+            <%= tempMax %>&#8457
+        </h2>
 
-    <h2>
-        Humidity
-        <%= humidity %>
-    </h2>
-    <h2>
-        Wind speed
-        <%= wind %>
-    </h2>
-    <h2>
-        clouds:
-        <%= clouds %>
-    </h2>
+        <h2>
+            Humidity
+            <%= humidity %>
+        </h2>
+        <h2>
+            Wind speed
+            <%= wind %>
+        </h2>
+        <h2>
+            clouds:
+            <%= clouds %>
+        </h2>
+    </div>
 </body>
 
 </html>
