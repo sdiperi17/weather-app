@@ -10,16 +10,20 @@
 </head>
 
 <body>
+
     <h1>Tune in Saida's Weather Channel</h1>
-    <form method="POST" action="/weather-forecast">
-        <label>Choose your Country
-            <input name="country" type="text">
-        </label>
-        <label>Your Zipcode
-            <input name="zipcode" type="text">
-        </label>
-        <button id="next-btn" type="submit">Next</button>
-    </form>
+    <div class="home-page-img">
+        <form class="form-submit" method="POST" action="/weather-forecast">
+            <label>Choose your Country
+                <input name="country" type="text">
+            </label>
+            <label>Your Zipcode
+                <input name="zipcode" type="text">
+            </label>
+            <button id="next-btn" type="submit">Next</button>
+        </form>
+
+    </div>
 
 
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="

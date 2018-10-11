@@ -7,45 +7,59 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Bowlby+One+SC" rel="stylesheet">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
-<body class="forecast-img">
-    <div class="transparent-box">
-        <h1>
-            Today is
-            <%= date %>
-        </h1>
-        <h1>
-            <%= country %>
-                <%= city %>
-        </h1>
-        <h2>
-            Current temp
-            <%= currentTemp %>&#8457
+<body>
+    <div id="btn-box">
+        <a href="http://localhost:3000/">
+            <ul id="home-btn" class="w3-ul">
+                <li class="w3-xxlarge">
+                    <i class="fa fa-home"></i> Home</li>
+            </ul>
+        </a>
+    </div>
+    <div class="forecast-img">
 
-        </h2>
+        <div class="transparent-box">
+            <h1>
+                Today is
+                <%= date %>
+            </h1>
+            <h1>
+                <%= country %>
+                    <%= city %>
+            </h1>
+            <h2>
+                Current temp
+                <%= currentTemp %>&#8457
 
-        <h2>
-            Min temp
-            <%= tempMin %>&#8457
-        </h2>
-        <h2>
-            Max temp
-            <%= tempMax %>&#8457
-        </h2>
-
-        <h2>
-            Humidity
-            <%= humidity %>
-        </h2>
-        <h2>
-            Wind speed
-            <%= wind %>
-        </h2>
-        <h2>
-            clouds:
-            <%= clouds %>
-        </h2>
+            </h2>
+            <div class="min-max-box">
+                <h2>
+                    Min temp
+                    <%= tempMin %>&#8457
+                </h2>
+                <h2>
+                    Max temp
+                    <%= tempMax %>&#8457
+                </h2>
+            </div>
+            <h2>
+                Humidity
+                <%= humidity %>
+            </h2>
+            <h2>
+                Wind speed
+                <%= wind %>
+            </h2>
+            <h2>
+                clouds:
+                <%= clouds %>
+            </h2>
+        </div>
     </div>
 </body>
 
